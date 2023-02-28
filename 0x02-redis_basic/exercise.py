@@ -20,7 +20,6 @@ def count_calls(method: Callable) -> Callable:
     :return:
     """
     key = method.__qualname__
-
     @wraps(method)
     def wrapper(self, *args, **kwargs):
         """
